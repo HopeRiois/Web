@@ -1,6 +1,35 @@
+<!DOCTYPE html>
 <html>
-<body> 
-<form action="Lista.html" method="post">
-<input type= "submit" value="Subir" />
+<head>
+	<meta charset="utf-8">
+	<title>Registro User CSS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="Lista.html" method="post">
+	<div class="contenedor">
+		<section class="Formulario">
+			<h4>Formulario de registro - Usuario</h4>
+			<input type="number" id="id_usr" min="0" max="99999999999" placeholder="ID del usuario">
+        		<select id="id_pais">
+        		<option value="1">Seleccione el País</option>
+				<option value="2">Colombia</option>
+				<option value="3">Venezuela</option>
+				<option value="4">Argentina</option>
+				<option value="5">Peru</option>
+				<option value="6">Chile</option>
+				<option value="7">Ecuador</option>
+				<option value="8">Paraguay</option>
+        		</select>
+        		<input type="text" id="nombre" maxlength="25" placeholder="Nombre">
+        		<input type="text" id="apellido" maxlength="25" placeholder="Apellidos">
+        		<input type="text"  id="direccion" maxlength="45" placeholder="Dirección">
+        		<input type="text" id="ccusuario" maxlength="20" placeholder="Número de Cédula">
+				<input type="password" id="ccpaswd" placeholder="Contraseña">
+				<input type="email" id="email" maxlength="120" placeholder="Correo electrónico">
+				<input type="text" id="telefono" maxlength="20" placeholder="Teléfono">
+				<input class="boton" type="submit" value="Registrar">
+		</section>
+	</div>
 </body>
 </html>
