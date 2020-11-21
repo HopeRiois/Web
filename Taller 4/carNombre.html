@@ -1,6 +1,148 @@
+<!DOCTYPE html>
 <html>
-<body> 
-<form action="Lista.html" method="post">
-<input type= "submit" value="Subir" />
-</body>
+	<head>
+		<title>Registro Car Materialize</title>
+		<meta charset="utf-8">
+		<!--Import Google Icon Font-->
+     	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+    		$('select').formSelect();
+  		});
+		</script>
+		<script type="text/javascript">
+		  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  })
+		</script>
+	</head>
+	<body style="background-color: #DAEBF8">
+		<form action="Lista.html" method="post">
+		<div class="section container">
+			<div class="row">
+				<form class="col s12">
+					<div class="row card-panel">
+						<h4>Formulario de Registro - carro</h4>
+						<div class="input-field col s12"></div>
+						<div class="input-field col s2">
+							<input type="number" name="id_auto" placeholder="ID del carro" min="0" max="99999999999" required>
+							<label for="id_auto">ID del carro</label>
+						</div>
+						<div class="input-field col s2">
+							<select id="id_movidoa">
+								<option value="1">Gasolina</option>
+								<option value="2">Diesel</option>
+								<option value="3">Diesel PLUS</option>
+								<option value="4">Hidrogeno</option>
+								<option value="5">Corriente</option>
+							</select>
+							<label for="id_movidoa">Tipo de combustible</label>
+						</div>
+						<div class="input-field col s2">
+							<select id="id_tipoauto">
+								<option value="1">Sedán</option>
+								<option value="2">Hatchback</option>
+								<option value="3">Suv</option>
+								<option value="4">Deportivo</option>
+								<option value="5">Comercial</option>
+								<option value="6">Furgoneta</option>
+								<option value="7">Pick Up</option>
+								<option value="8">Camion</option>
+							</select>
+							<label for="id_tipoauto">Tipo de carro</label>
+						</div>
+						<div class="input-field col s2">
+							<select id="id_estado">
+								<option value="1">Excelente</option>
+								<option value="2">Normal</option>
+								<option value="3">Malo</option>
+							</select>
+							<label for="id_estado">Estado del carro</label>
+						</div>
+						<div class="input-field col s2">
+							<select id="id_marca">
+								<option value="1">Ford</option>
+								<option value="2">Audi</option>
+								<option value="3">Chevrolet</option>
+								<option value="4">Honda</option>
+								<option value="5">Nissan</option>
+								<option value="6">Lamborgini</option>
+								<option value="7">Bravado</option>
+								<option value="8">Tesla</option>
+							</select>
+							<label for="id_marca">Marca del carro</label>
+						</div>
+						<div class="input-field col s2">
+							<input type="number" id="id_usr" placeholder="ID del usuario" min="0" max="99999999999" required>
+							<label for="id_usr">ID del usuario</label>
+						</div>
+						<div class="input-field col s2">
+							<input type="text" id="modelo" maxlength="60" class="validate" required>
+							<label for="modelo" class="validate" required>Modelo</label>
+						</div>
+						<div class="input-field col s2">
+							<input type="number" id="motor" placeholder="Motor" step="0.01" min="1" max="99.99" required>
+							<label for="motor">Motor</label>
+						</div>
+						<div class="input-field col s2">
+							<input type="number" id="anio" step="1" min="1900" max="2022" placeholder="Año">
+							<label for="anio">Año</label>
+						</div>
+						<div class="input-field col s2">
+							<input type="text" class="datepicker" id="fechapub" maxlength="10" class="validate" required>
+							<label for="fechapub">Fecha Publicación</label>
+						</div>
+						<div class="input-field col s4">
+							<textarea id="detalle" class="materialize-textarea"></textarea> 
+							<label for="detalle">Detalles</label>
+						</div>
+						<div class="input-field col s3">
+							<textarea id="cc_pic01" class="materialize-textarea" maxlength="85"></textarea> 
+							<label for="cc_pic01">Descripción 1</label>
+						</div>
+						<div class="input-field col s3">
+							<textarea id="cc_pic02" class="materialize-textarea" maxlength="85"></textarea> 
+							<label for="cc_pic02">Descripción 2</label>
+						</div>
+						<div class="input-field col s3">
+							<textarea id="cc_pic03" class="materialize-textarea" maxlength="85"></textarea> 
+							<label for="cc_pic03">Descripción 3</label>
+						</div>
+						<div class="input-field col s3">
+							<textarea id="cc_destac" class="materialize-textarea" maxlength="2"></textarea> 
+							<label for="cc_destac">Destacado</label>
+						</div>
+						<div class="input-field col s4">
+							<input type="number" id="caja" step="1" min="0" max="999999.99" placeholder="Precio caja" required>
+							<label for="caja">Valor Caja</label>	
+						</div>
+						<div class="input-field col s4">
+							<input type="number" id="precio" step="0.01" min="0" max="999999.99" placeholder="Precio de venta" required>
+							<label for="precio">Precio</label>	
+						</div>
+						<div class="input-field col s4">
+							<select id="moneda">
+								<option value="1">Peso</option>
+								<option value="2">Euro</option>
+								<option value="3">Dolar</option>
+								<option value="4">Yen</option>
+								<option value="5">Renminbi</option>
+							</select>
+							<label for="moneda">Moneda</label>
+						</div>
+						<button class="btn" type="submit">Enviar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
 </html>

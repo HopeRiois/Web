@@ -1,7 +1,77 @@
+<!DOCTYPE html>
 <html>
-<body> 
-
-<form action="Lista.html" method="post">
-<input type= "submit" value="Subir" />
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Registro Car CSS</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<form action="Lista.html" method="post">
+		<div class="contenedor">
+			<section class="Formulario">
+				<h4>Formulario de registro - carro</h4>
+				<input type="number" name="id_auto" placeholder="ID del carro" min="0" max="99999999999">
+				<label for="id_movidoa">Seleccione el tipo de combustible</label>
+				<select id="id_movidoa">
+					<option value="1">Gasolina</option>
+					<option value="2">Diesel</option>
+					<option value="3">Diesel PLUS</option>
+					<option value="4">Hidrogeno</option>
+					<option value="5">Corriente</option>
+				</select>
+				<label for="id_tipoauto">Seleccione el tipo de carro</label>
+				<select id="id_tipoauto">
+					<option value="1">Sedán</option>
+					<option value="2">Hatchback</option>
+					<option value="3">Suv</option>
+					<option value="4">Deportivo</option>
+					<option value="5">Comercial</option>
+					<option value="6">Furgoneta</option>
+					<option value="7">Pick Up</option>
+					<option value="8">Camion</option>
+				</select>
+				<label for="id_estado">Seleccione el estado del carro</label>
+				<select id="id_estado">
+					<option value="1">Excelente</option>
+					<option value="2">Normal</option>
+					<option value="3">Malo</option>
+				</select>
+				<label for="id_marca">Seleccione la marca del carro</label>
+				<select id="id_marca">
+					<option value="1">Ford</option>
+					<option value="2">Audi</option>
+					<option value="3">Chevrolet</option>
+					<option value="4">Honda</option>
+					<option value="5">Nissan</option>
+					<option value="6">Lamborgini</option>
+					<option value="7">Bravado</option>
+					<option value="8">Tesla</option>
+				</select>
+				<input type="number" id="id_usr" placeholder="ID del usuario" min="0" max="99999999999">
+				<input type="text" id="modelo" maxlength="60" placeholder="Descripción del modelo">
+				<input type="number" id="anio" step="1" min="1900" max="2022" placeholder="Año">
+				<input type="text" id="detalle" placeholder="Detalles">
+			</section>
+			<section class="Formulario">
+				<input type="text" id="desc1" maxlength="60" placeholder="Descripción 1">
+				<input type="text" id="desc2" maxlength="60" placeholder="Descripción 2">
+				<input type="text" id="desc3" maxlength="60" placeholder="Descripción 3">
+				<input type="number" id="motor" placeholder="Motor" step="0.01" min="1" max="99.99">
+				<label for="fechapub">Fecha Publicación</label>
+				<input type="date" id="fechapub" maxlength="10" placeholder="Fecha">
+				<input type="number" id="precio" step="0.01" min="0" max="999999.99" placeholder="Precio de venta">
+				<label for="moneda">Seleccione la moneda correspondiente</label>
+				<select id="moneda">
+					<option value="1">Peso</option>
+					<option value="2">Euro</option>
+					<option value="3">Dola</option>
+					<option value="4">Yen</option>
+					<option value="5">Renminbi</option>
+				</select>
+				<input type="text" name="cc_pic01" maxlength="85" placeholder="Descripcion del carro">
+				<input type="number" id="caja" step="1" min="0" max="999999.99" placeholder="Precio caja">
+				<input class="boton" type="submit" value="Registrar">
+			</section>
+		</div>
+	</body>
 </html>
