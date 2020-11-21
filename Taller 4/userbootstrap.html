@@ -1,6 +1,92 @@
-<html>
-<body> 
-<form action="Lista.html" method="post">
-<input type= "submit" value="Subir" />
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <title>Registro User Bootstrap</title>  
+  </head>
+  <body style="background-color: #DAEBF7">
+    <form action="Lista.html" method="post">
+	<header style="height: 1.7em"></header> 
+    <div style="height: 0.2em;"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card shadow-lg p-3 mb-5" style="background-color: #F7F7F7">
+        		<div class="card-header display-4 font-weight-light text-dark text-center">Formulario de registro - Usuario</div>
+        		<div class="card-body">
+        			<form id="form1">
+                <div class="form-row">
+                  <div class="col">
+                  	<label for="id_usr" class="control-label"> ID Usuario </label>
+        						<input type="number" class="form-control" id="id_usr" min="0" max="99999999999" placeholder="ID del usuario">
+                  </div>
+                  <div class="col">
+                    <form>
+        					 		<label for="id_pais" class="control-label"> ID País </label>
+        							<select id="id_pais" class="form-control">
+										<option value="1">Seleccione el País</option>
+										<option value="2">Colombia</option>
+										<option value="3">Venezuela</option>
+										<option value="4">Argentina</option>
+										<option value="5">Peru</option>
+										<option value="6">Chile</option>
+										<option value="7">Ecuador</option>
+										<option value="8">Paraguay</option>
+        							</select>
+        						</form>
+                  </div>
+                </div>               	
+                <div class="form-row">
+                  <div class="col">
+                    <label for="nombre" class="control-label"> Nombre </label>
+        						<input type="text" class="form-control" id="nombre" maxlength="25" placeholder="Nombre">   
+                  </div>
+                  <div class="col">
+                    <label for="apellido" class="control-label"> Apellidos </label>
+        						<input type="text" class="form-control" id="apellido" maxlength="25" placeholder="Apellidos"> 
+                  </div>
+                </div>                  					
+                <div class="form-row">
+                  <div class="col">
+                    <label for="direccion" class="control-label"> Dirección </label>
+                    <input type="text" class="form-control" id="direccion" maxlength="45" placeholder="Dirección"> 
+                  </div>
+                </div>                  
+                <div class="form-row">
+                  <div class="col">
+        						<label for="ccusuario" class="control-label"> Cédula </label>
+        						<input type="text" class="form-control" id="ccusuario" maxlength="20" placeholder="Número de Cédula">
+      						</div>
+							<div class="col">
+        						<label for="ccpaswd" class="control-label">Contraseña </label>
+        						<input type="password" class="form-control" id="ccpaswd" placeholder="Contraseña">
+      						</div>
+                </div>                  
+                <div class="form-row">
+                  <div class="col">
+        						<label for="email" class="control-label"> Correo electrónico </label>
+        						<input type="email" class="form-control" id="email" maxlength="120" placeholder="Correo electrónico">
+      						</div>
+      						<div class="col">
+        						<label for="telefono" class="control-label"> Teléfono </label>
+        						<input type="text" class="form-control" id="telefono" maxlength="20" placeholder="Teléfono">
+      						</div>
+                </div>
+              </form>
+              <br>
+              <div class="text-center">
+                <button class="btn btn-info" type="submit">Registrar</button>
+              </div>
+        		</div>
+        	</div>   
+    		</div>
+      </div>       
+    </div>                        
+  </body>
 </html>
