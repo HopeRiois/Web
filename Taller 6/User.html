@@ -12,32 +12,6 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-	<style type="text/css">
-		.multi-range, .multi-range * { box-sizing: border-box; padding: auto; margin: auto; }
-		.multi-range { 
-    		position: relative; width: 300px; height: 28px; margin: 50px;
-    		font-family: monospace;
-		}
-		.multi-range > hr { position: absolute; width: 100%; top: 50%; }
-		.multi-range > input[type=range] {
-    		width: calc(100% - 16px); 
-    		position: absolute; bottom: 6px; left: 0;
-		}
-		.multi-range > input[type=range]:last-of-type { margin-left: 30px; }
-		.multi-range > input[type=range]::-webkit-slider-thumb { transform: translateY(-18px); }
-		.multi-range > input[type=range]::-webkit-slider-runnable-track { -webkit-appearance: none; height: 0px; }
-		.multi-range > input[type=range]::-moz-range-thumb { transform: translateY(-18px); }
-		.multi-range > input[type=range]::-moz-range-track { -webkit-appearance: none; height: 0px; }
-		.multi-range > input[type=range]::-ms-thumb { transform: translateY(-18px); }
-		.multi-range > input[type=range]::-ms-track { -webkit-appearance: none; height: 0px; }
-		.multi-range::after { 
-    		content: attr(data-lbound) ' - ' attr(data-ubound); 
-    		position: absolute; top: 0; left: 105%; white-space: nowrap;
-    		display: block; padding: 0px 5px; margin: 15px 2px;
-    		height: 26px; width: auto; border: 1px solid #ddd; 
-    		font-size: 13px; line-height: 20px;
-		}
-	</style>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -52,7 +26,7 @@
 	</script>
 </head>
 <body style="background-color: #DAEBF8">
-	<form action="Pagina_inicial.html" method="post">
+	<form action="Index.html" method="post">
 	<div class="section container">
 		<div class="row">
 			<form class="col s12">
@@ -70,34 +44,17 @@
 						<input type="text" id="apellido">
 						<label for="apellido">Apellidos</label>
 					</div>
+					
 					<div class="input-field col s6">
-						<input type="text" id="direccion" maxlength="45">
-						<label for="direccion">Dirección</label>
-					</div>
-					<div class="input-field col s6">
-						<input type="number" id="telefono" min="6" max="20">
-						<label for="telefono">Teléfono</label>
-					</div>
-					<div class="input-field col s12">
 						<input type="email" id="email" maxlength="120">
 						<label for="email">Email</label>
 					</div>
-					<div class="input-field col s6">
-						<input type="text" id="ccusuario">
-						<label for="ccusuario">CC del usuario</label>
+					<div class="input-field col s3">
+						<input type="date" id="FechaN" maxlength="10" onchange="return CalcularEdad()">
+						<label for="FechaN">Fecha de nacimiento</label>
 					</div>
-					<div class="input-field col s6">
-						<select id="id_pais">
-							<option value="1">Seleccione el País</option>
-							<option value="2">Colombia</option>
-							<option value="3">Venezuela</option>
-							<option value="4">Argentina</option>
-							<option value="5">Peru</option>
-							<option value="6">Chile</option>
-							<option value="7">Ecuador</option>
-							<option value="8">Paraguay</option>
-						</select>
-						<label for="id_pais">País</label>			
+					<div class="input-field col s3" id="EdadCal">
+						<label for="EdadCal">Edad</label>
 					</div>
 					<div class="input-field col s6">
 						<input type="password" id="ccpaswd">
@@ -107,72 +64,33 @@
 						<input type="password" id="ccpaswdValidate">
 						<label for="password">Escriba su contraseña nuevamente</label>
 					</div>
-					<div class='input-field col s4 multi-range' data-lbound='10000000' data-ubound='150000000'>
-    					<hr />
-    						<label>Rango de precios</label>
-    						<input type='range' min='10000000' max='150000000' step='1000000' value='10000000' oninput='this.parentNode.dataset.lbound=this.value;'/>
-    						<input type='range' min='10000000' max='150000000' step='1000000' value='150000000' oninput='this.parentNode.dataset.ubound=this.value;'/>
+					<div class="input-field col s3 switch" id="check1">
+						<label>¿Ha sufrido enfermedades? <br> No <input type="checkbox"> <span class="lever"> </span> Si </label>
 					</div>
-					<div class="input-field col s3">
-						<form>
-							<label>
-								<input id="radio" type="radio" onclick="show()">
-								<span> Mostrar preferencias </span>
-							</label>
-						</form>
+					<div class="input-field col s3 switch" style="display:none" id="check2">
+						<label>¿Han sido contagiosas? <br> No <input type="checkbox"> <span class="lever"> </span> Si </label>
 					</div>
-					<div class="input-field col s2" id="act" hidden="true">
-						<select id="color">
-							<option value="0">Seleccione el color</option>
-   							<option value="1">Amarillo</option>
-   							<option value="2">Blanco</option>
-   							<option value="3">Azul</option>
-   							<option value="4">Rojo</option>
-   							<option value="5">Verde</option>
-   							<option value="6">Naranja</option>
-   							<option value="7">Morado</option>
-							<option value="8">Negro</option>
-							<option value="9">Plateado</option>
-   						</select>
-						<select id="marca">
-							<option value="0">Seleccione la marca</option>
-   							<option value="1">Ford</option>
-							<option value="2">Audi</option>
-							<option value="3">Chevrolet</option>
-							<option value="4">Honda</option>
-							<option value="5">Nissan</option>
-							<option value="6">Lamborgini</option>
-							<option value="7">Bravado</option>
-							<option value="8">Tesla</option>
-   						</select>
-						<select id="estilo">
-							<option value="0">Seleccione el tipo</option>
-   							<option value="1">Sedán</option>
-							<option value="2">Hatchback</option>
-							<option value="3">Suv</option>
-							<option value="4">Deportivo</option>
-							<option value="5">Comercial</option>
-							<option value="6">Furgoneta</option>
-							<option value="7">Pick Up</option>
-							<option value="8">Camion</option>
-   						</select>
-						<select id="modelo">
-							<option value="0">Seleccione el modelo</option>
-   							<option value="1">Allroad</option>
-   							<option value="2">Z3</option>
-   							<option value="3">Camaro</option>
-   							<option value="4">Fusion</option>
-   							<option value="5">New Rio</option>
-   							<option value="6">Supra</option>
-   						</select>
+				    <div class="input-field col s6" style="display:none" id="ing">
+						<input type="text" id="Enfer">
+						<label for="Enfer">Nombre la(s) enfermedad(es)</label>						
 					</div>
+	<script>
+		$( "#check1" ).click(function() {
+			$( "#check2" ).show();
+					});
+				$( "#check2" ).click(function() {
+					$( "#ing" ).show();
+					});
+	</script>		
+					<div class="input-field col s6" >
 					<button class="btn-large right" type="submit" onclick="return enviarFormulario()">Enviar</button>
+					</div>
 				</div>
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<script src="validacion.js"></script>
+	<script src="validacionIndex.js"></script>
 </body>
 </html>
