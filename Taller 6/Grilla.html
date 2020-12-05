@@ -1,36 +1,73 @@
 <html>
 <head>
-<table>
-<table border = 1 width=100&>
- <caption><h2>Porcentaje de uso de los lenguajes de programación</h2></caption>
- <colgroup>
-  <col span="1"style="background-color:white">
-  <col span="2"style="background-color:white">
- </colgroup>
- <tr>
-  <th><h3>Lenguaje</h3></th>
-  <th><h3>Porcentaje</h3></th>
- </tr>
- <tr>
-  <td>Python</td>
-  <td>25.95%</td>
- </tr>	
- <tr>
-  <td>Java</td>
-  <td>21.42%</td>
- </tr>
- <tr>
-  <td>JavaScript</td>
-  <td>8.26%</td>
- </tr>
- <tr>
-  <td>C#</td>
-  <td>7.62%</td>
- </tr>			
-</table>
-<br>
-<form action="Lista.html" method="post">
-<input type= "submit" value="Regresar" />
-</br>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		 $("#myInput").on("keyup", function() {
+		 var value = $(this).val().toLowerCase();
+		 $("#data tr").filter(function() {
+		 $(this).toggle($
+		(this).text().toLowerCase().indexOf(value) > -1)
+		 });
+		 });
+		});
+	</script>
 </head>
+<body>
+	<div class="container">
+		<div class="section">
+			<caption><h2>Tabla para filtrar datos</h2></caption>
+			<p>Buscar en la tabla</p>
+			<input id='myInput' type="text" placeholder="Search..">
+			<table id='myTable' class="centered">
+			<thead>
+			<tr>
+			<th rowspan = "4">id</th>
+			<th rowspan = "4">name</th>
+			<th rowspan = "4">username</th>
+			<th rowspan = "4">email</th>
+			<th colspan = "6">address</th>
+			<th rowspan = "4">phone</th>
+			<th rowspan = "4">website</th>
+			<th colspan = "3">company</th>
+			</tr>
+			<tr>
+			<th rowspan = "2">street</th>
+			<th rowspan = "2">suite</th>
+			<th rowspan = "2">city</th>
+			<th rowspan = "2">zipcode</th>
+			<th colspan = "2"><center>geo</center></th>
+			<th rowspan = "2">name</th>
+			<th rowspan = "2">cachephrase</th>
+			<th rowspan = "2">bs</th>
+			</tr>
+			<tr>
+			<th>lat</th>
+			<th>lng</th>
+			</tr>
+
+			</thead>
+			<tbody id="data">
+			</tbody>
+			</table>				
+			<br>
+				<form action="Lista.html" method="post">
+				<input type= "submit" value="Regresar" />
+			</br>
+		</div>		
+	</div>
+	<script src="validacionGrilla.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
 </html>
