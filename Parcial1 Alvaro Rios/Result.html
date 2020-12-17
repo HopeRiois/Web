@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+	<meta charset="utf-8">
+	<!--Import Google Icon Font-->
+    	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet"  href="Tabla_cal.css">
+	<script>
+		$(document).ready(function(){
+			var x1 = getParameterByName('alimento')
+			var x2= getParameterByName('calorias')
+			var x3 = getParameterByName('grasas')
+			var x4 = getParameterByName('proteina')
+			var x5 = getParameterByName('carbohidratos')
+			var x6 = getParameterByName('Emoticon')
+			llenarTabla(x1, x2, x3, x4, x5, x6)
+		});
+	</script>
+</head>
+<body style="background-color: #FFFFFF">
+	<h3 align="Center">Resultado</h3>
+	<form action="Tabla_calorias.html" method="post">
+    <div class="section container">
+		<div class="row">
+			<form class="col s12">
+				<div class="row card-panel">
+	<table id="TablaFinal"></table>
+	</div>
+			</form>
+		</div>
+	<input class="boton" align="Center" type="submit" value="Regresar">
+	<script src="Tabla_cal.js"></script>
+</body>
+</html>

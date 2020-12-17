@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parcial1-2181705</title>
+
+	<meta charset="utf-8">
+	<!--Import Google Icon Font-->
+    	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet"  href="Tabla_cal.css">
+		<script>
+		$(document).ready(function(){
+		Emoji();}
+		);
+	</script>
+</head>
+<body style="background-color: #FFFFFF">
+	<h3 align="Center">Tabla de calorias</h3>
+	<form name = "formulario" action="Result.html" onsubmit="Aceptar()" onreset="Cancelar()">
+	<div class="section container">
+		<div class="row">
+			<form class="col s12">
+				<div class="row card-panel">
+					<table class="centered">
+		<thead>
+			<tr>
+				<th>Alimento</th>
+				<th>Calorías (kCal)</th>
+				<th>Grasas (g)</th>
+				<th>Proteina (g)</th>
+				<th>Carbohidratos (g)</th>
+				<th>ok</th>
+				<th>Opciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="columna1">
+				<td class="texto">Arandano</td>
+				<td class="texto">49</td>
+				<td class="texto">0.2</td>
+				<td class="texto">0.4</td>
+				<td class="texto">12.7</td>
+				<td class="emoticon">bien</td>
+				<td id="editor1" class="editor" onclick="editarC1('columna1')">Editar</td>
+			</tr>
+			<tr class="columna2">
+				<td class="texto">Platano</td>
+				<td class="texto">90</td>
+				<td class="texto">0.3</td>
+				<td class="texto">1.0</td>
+				<td class="texto">23.5</td>
+				<td class="emoticon">mal</td>
+				<td id="editor2" class="editor" onclick="editarC1('columna2')">Editar</td>
+			</tr>
+			<tr class="columna3">
+				<td class="texto">Cereza</td>
+				<td class="texto">46</td>
+				<td class="texto">0.4</td>
+				<td class="texto">0.9</td>
+				<td class="texto">10.9</td>
+				<td class="emoticon">mal</td>
+				<td id="editor3" class="editor" onclick="editarC1('columna3')">Editar</td>
+			</tr>
+			<tr class="columna4">
+				<td class="texto">Fresa</td>
+				<td class="texto">37</td>
+				<td class="texto">0.5</td>
+				<td class="texto">0.8</td>
+				<td class="texto">8.3</td>
+				<td class="emoticon">bien</td>
+				<td id="editor4" class="editor" onclick="editarC1('columna4')">Editar</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="input-field col s6">
+	<h6  style="color: #6C757D" align="center">Contenido nutricional por cada 100 g de alimento</h6>
+	</div>
+	<div class="input-field col s6" ></div>
+	<div class="input-field col s12" id="mostrarCambio">
+	<script src="Tabla_cal.js"></script>
+	</div>
+	</div>	
+	</div>
+			</form>
+		</div>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

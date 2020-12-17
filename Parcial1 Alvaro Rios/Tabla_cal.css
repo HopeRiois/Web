@@ -1,0 +1,65 @@
+body{
+	background-color: #9FD7FF;
+	font-family: Georgia;
+}
+
+table{
+	width: 60%;
+	text-align: center;
+	margin: auto;
+}
+th{
+	background-color: #6C757D;
+	color: white;
+	padding: 15px 32px;
+}
+td{
+	background-color: #E8EDFF;
+	color: #6C757D;
+}
+.editor{
+	color: #0780E5;
+}
+.editando{
+	color: #6C757D;
+}
+
+.boton{
+	border-radius: 4px;
+	background-color: #FFFFFF; 
+    border-color: #8798E4;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    color: #8798E4;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#mostrarCambio{
+	margin: auto;
+	text-align: center;
+}
+
+input {
+	border-radius: 4px;
+	background-color: #FFFFFF; 
+    border-color: #8798E4;
+    color: white;
+    text-align: center;
+    color: #45528C;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+select {
+	border-radius: 4px;
+	background-color: #FFFFFF; 
+    border-color: #8798E4;
+    color: white;
+    text-align: center;
+    color: #45528C;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
