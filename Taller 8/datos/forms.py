@@ -44,3 +44,4 @@ class PersonaModelForm(forms.ModelForm):
 		if self.cleaned_data.get('password') != self.cleaned_data.get('confirmarPassword'):
 			raise ValidationError('Las contraseñas no coinciden')
 		return self.cleaned_data
+        
